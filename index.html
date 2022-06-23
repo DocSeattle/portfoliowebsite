@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="project name" />
+    <meta name="Seattle" content="Index" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seattle's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <!--js-->
+    <!--Link to css -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Portfolio</button>
+                <div class="dropdown-content">
+                    <a href="/assets/html/webdev.html">Web Development</a>
+                    <a href="/assets/html/portfolio_substances.html">Substances</a>
+                    <a href="/assets/html/portfolio3d.html">3d Modelling</a>
+                    <a href="/assets/html/portfolio2d.html">2d Digital Art</a>
+                </div>
+            </div>
+            <a href="/assets/html/about.html">About</a>
+        </div>
+    </header>
+    <section class="projects">
+        <div class="projects-header">
+            <h2>Recent Projects</h2>
+        </div>
+        <div class="projects-list">
+            <div class="projects-card">
+                <h3>Website Icon</h3>
+                <p>
+                    I took some time today, just as
+                    a break from all the faff with 
+                    HTML to make a proper icon for 
+                    this here website. This is 
+                    what I came up with.
+
+                    Considering this is my first 
+                    proper project with Vector 
+                    images, I'm really quite chuffed
+                    with how it came out.
+                </p>
+                <img src="favicon.svg" width=300px; height=300px; style="margin-bottom:0.5em;">
+            </div>
+            <div class="projects-card">
+                <h3>This Website</h3>
+                <p>I've been working a great deal
+                    on this website, I think that
+                    getting a place to more permanently
+                    upload, store and archive things
+                    that I make can only do me good
+                    in the long run.
+                </p>
+            </div>
+            <div class="projects-card">
+                <h3>Movement Statemachine</h3>
+                <p> I've spent a fair bit of time
+                    trying to learn how to code
+                    in C#, for the sakes of getting
+                    into game development. My engine
+                    of choice has been Unity3D and
+                    my first project in Unity is
+                    to make a statemachine that
+                    can easily be made to handle
+                    most movement in any project.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="devlog">
+        <div class="devlog-header">
+            <h2>Devlog</h2>
+        </div>
+        <div class="devlog-feed">
+            <div class="devlog-entry">
+                <h3> Website Development #3</h3>
+                <p>Definitely all by myself (thanks hunt)
+                    fixed the three js not displaying. Now
+                    I can do stuff like this:
+                </p>
+                <canvas id="bg" class="canvas-preview"></canvas>
+                <h5 id="date"> '22-06-22</h5>
+            </div>
+            <div class="devlog-entry">
+                <h3>Website Refactoring</h3>
+                <p>
+                    Started work on refactoring and
+                    reformatting the website to make
+                    User Experience better as well as
+                    improve maintenance for the future.
+                </p>
+                <h5 id="date">'22-06-22</h5>
+            </div>
+            <div class="devlog-entry">
+                <h3>Website Development #2</h3>
+                <p>
+                    Continued development on the website
+                    Been slowly familiarizing myself with
+                    HTML/CSS/JS, specifically learning how
+                    CSS Grid works.
+                </p>
+                <h6 id="date">'22-06-21</h6>
+            </div>
+            <div class="devlog-entry">
+                <h3>Website Development #1</h3>
+                <p> Started development on my portfolio
+                    website. This portfolio website, to
+                    be clear. Experimented with site
+                    layouts for a while, still not quite
+                    happy with how it's looking but getting
+                    closer to a finished product.
+                </p>
+                <h6 id="date">'22-06-20</h6>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div class="glow-bg"></div>
+            <div class="glitch" data-text="Seattle">Seattle</div>
+            <div class="glow">Seattle</div>
+            <p class="subtitle">impractical developer</p>
+            </div>
+            <div class="scanlines"></div>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
