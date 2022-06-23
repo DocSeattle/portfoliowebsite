@@ -78,6 +78,7 @@ section:nth-of-type(1) {
 // Devlog
 section:nth-of-type(2) {
     grid-area: devlog;
+    z-index: 1;
 }
 
 main {
@@ -92,6 +93,7 @@ footer {
     padding-left: 2em;
     color: $primary-white;
     box-shadow: 0px 0px 10px 5px $pink;
+    z-index: 0;
 }
 /*---- TAGS ----*/
 
@@ -290,7 +292,8 @@ footer {
     font-size: 9vw;
     font-family: 'Spantaran';
     text-align: center;
-    margin: 70px 200px;
+    margin-top: 200px;
+    // margin: 70px 200px;
     animation: glitch 5s 5s infinite;
   }
 
@@ -319,10 +322,10 @@ footer {
 
 .glow {
     @extend .glitch;
-    text-shadow: 0 0 1000px rgb(223, 191, 191);
+    text-shadow: 0 0 200px rgb(223, 191, 191);
     color: transparent;
-    position: absolute !important;
-    top: 0; 
+    position: absolute;
+    margin-top: -200px;
 }
 
 .subtitle {
