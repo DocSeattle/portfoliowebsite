@@ -1,6 +1,5 @@
 import '../css/main.css';
 import * as THREE from 'htts://unpkg.com/three@0.141.0/build/three.module.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 /** VARIABLES */
 let pWidth = 200;
