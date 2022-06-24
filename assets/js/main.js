@@ -1,4 +1,6 @@
 import './../css/main.css';
+import 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.js';
+import 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.module.js';
 import * as THREE from 'three';
 import { AmbientLight } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
