@@ -2,7 +2,7 @@
   "name": "portfoliowebsite",
   "version": "1.0.0",
   "description": "my portfolio website",
-  "main": "main.js",
+  "main": "index.js",
   "dependencies": {
     "esbuild": "^0.14.47",
     "esbuild-windows-64": "^0.14.47",
