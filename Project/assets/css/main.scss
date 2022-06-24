@@ -271,13 +271,19 @@ footer {
 /*---- FX ----*/
 /*---- FX ----*/
 /* ---- CLASSES ---- */
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    text-align: center;
+  }
+
 .glitch {
     color: rgb(223, 191, 191);
-    position: relative !important;
+    position: absolute !important;
     font-size: 9vw;
     font-family: 'Spantaran';
-    text-align: center;
-    margin-top: 200px;
     // margin: 70px 200px;
     animation: glitch 5s 5s infinite;
   }
@@ -310,17 +316,15 @@ footer {
     text-shadow: 0 0 200px rgb(223, 191, 191);
     color: transparent;
     position: absolute;
-    margin-top: -200px;
 }
 
 .subtitle {
-    font-family: 'RealityHyperRegular', serif;
-    font-weight: 100;
+    font-family: 'rainyhearts';
+    font-weight: 150;
     font-size: 1vw;
     color: $primary-white;
     text-transform: uppercase;
     letter-spacing: 1em;
-    text-align: center;
 }
 
 /* ---- KEYFRAMES ---- */
@@ -401,4 +405,34 @@ footer {
     footer {
         display: none;
     }
+
+    /*---- FX ----*/
+    .container {
+        position: sticky;
+        top: 15%;
+        left: 0%;
+    }
+    .glow {
+        @extend .glitch;
+        text-shadow: 0 0 200px rgb(223, 191, 191);
+        color: transparent;
+        position: absolute;
+    }
+    
+    .subtitle {
+        font-family: 'rainyhearts';
+        font-weight: 150;
+        font-size: 1vw;
+        color: $primary-white;
+        text-transform: uppercase;
+        letter-spacing: 1em;
+    }
+
+    .glitch {
+        color: rgb(223, 191, 191);
+        font-size: 9vw;
+        font-family: 'Spantaran';
+        // margin: 70px 200px;
+        animation: glitch 5s 5s infinite;
+      }
 }

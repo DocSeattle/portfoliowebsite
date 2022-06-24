@@ -10,20 +10,20 @@
     <link rel="icon" type="image/x-icon" href="favicon.svg">
     <!--js-->
     <!--Link to css -->
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/Project/assets/css/main.css" />
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <a href="/index.html">Home</a>
+            <a href="/Project/index.html">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Portfolio</button>
                 <div class="dropdown-content">
-                    <a href="/assets/html/webdev.html">Web Development</a>
-                    <a href="/assets/html/portfolio_substances.html">Substances</a>
-                    <a href="/assets/html/portfolio3d.html">3d Modelling</a>
-                    <a href="/assets/html/portfolio2d.html">2d Digital Art</a>
+                    <a href="/Project/assets/html/webdev.html">Web Development</a>
+                    <a href="/Project/assets/html/portfolio_substances.html">Substances</a>
+                    <a href="/Project/assets/html/portfolio3d.html">3d Modelling</a>
+                    <a href="/Project/assets/html/portfolio2d.html">2d Digital Art</a>
                 </div>
             </div>
             <a href="/assets/html/about.html">About</a>
@@ -82,6 +82,37 @@
         </div>
         <div class="devlog-feed">
             <div class="devlog-entry">
+                <h3>Website Development #4</h3>
+                <p>
+                    Development of the site
+                    has been an uphill battle the 
+                    past few days. First, half of the
+                    css file didn't save, which is both
+                    very strange and incredibly infuriating.
+
+                    After that, I decided to start 
+                    using GIT for source control and web
+                    hosting through their Pages service.
+                    Which, whilst yes, is a good idea,
+                    takes many hours to actually get running
+                    in my case. Learning how to navigate github,
+                    understanding branches, push, pull, commit
+                    and deploy. As well as getting the Pages 
+                    environment to build from the correct 
+                    branch of the project all was a confusing
+                    mess of a process.
+
+                    But, it is now done, and I should be able to
+                    continuously deploy the site and it'll update
+                    after each one. For the moment, though. I 
+                    have to be wary of how I format the /dist 
+                    file structure. My main issue stems from 
+                    the Pages environment not navigating files
+                    as I'm used to.
+                </p>
+                <h5 id="date">'22-06-24</h5>
+            </div>
+            <div class="devlog-entry">
                 <h3> Website Development #3</h3>
                 <p>Definitely all by myself (thanks hunt)
                     fixed the three js not displaying. Now
@@ -126,10 +157,8 @@
     <main>
         <div class="container">
             <div class="glow-bg"></div>
-            <div class="glitch" data-text="Seattle">
-                Seattle
-                <div class="glow">Seattle</div>
-            </div>
+            <div class="glitch" data-text="Seattle">Seattle</div>
+            <div class="glow">Seattle</div>
             <p class="subtitle">impractical developer</p>
             </div>
             <div class="scanlines"></div>
@@ -137,6 +166,6 @@
     <footer>
         <h2>footer</h2>
     </footer>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="/Project/assets/js/index.js"></script>
 </body>
 </html>
