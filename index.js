@@ -1,5 +1,5 @@
 import '../css/main.css';
-import * as THREE from 'htts://unpkg.com/three@0.141.0/build/three.module.js';
+import * as THREE from 'three';
 
 /** VARIABLES */
 let pWidth = 200;
