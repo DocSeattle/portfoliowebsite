@@ -1,54 +1,17 @@
-/*---- COLOURS ----*/
-$dominant: black;
-$secondary: lighten(black, 10%);
-$accent: magenta;
-$text: darken(white, 15%);
-$text-secondary: lightgrey;
-
-$primary-white: #F0DBD1;
-$light-purple: #5D04D9;
-$dark-purple: #360259;
-$dark: #0D0D0D;
-$pink: #8704BF;
-/*---- COLOURS ----*/
-
-/*---- FONTS ----*/
-@font-face {
-    font-family: 'Spantaran';
-    src: url("Spantaran.ttf");
-}
-
-@font-face {
-    font-family: 'rainyhearts';
-    src: url("rainyhearts.ttf");
-}
-
-@font-face {
-    font-family: 'RealityHyperRegular';
-    src: url("Reality\ Hyper\ Regular.ttf");
-}
-
-/*---- FONTS ----*/
+@use "./constant" as C;
 
 /*---- GRID TEMPLATE ----*/
-body, html {
-    height: 100vh;
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
     display: grid;
     grid-template-columns: 27% 27% 27% 19% !important;
-    grid-template-rows: 50px auto auto 10% !important;
+    grid-template-rows: 60px auto auto 10% !important;
     grid-template:
     "header header header projects"
     "main main main projects"
     "main main main devlog"
     "footer footer footer devlog";
 }
-
-
 
 /*---- TAGS ----*/
 header {
@@ -68,16 +31,16 @@ section:nth-of-type(2) {
 
 main {
     grid-area: main;
-    background-color: $dark;
+    background-color: C.$dark;
     padding: 2em;
 }
 
 footer {
     grid-area: footer;
-    background-color: $secondary;
+    background-color: C.$secondary;
     padding-left: 2em;
-    color: $primary-white;
-    box-shadow: 0px 0px 10px 5px $pink;
+    color: C.$primary-white;
+    box-shadow: 0px 0px 10px 5px C.$pink;
     z-index: 0;
 }
 /*---- TAGS ----*/
@@ -85,22 +48,22 @@ footer {
 /*---- CLASSES ----*/
 .navbar {
     overflow: hidden;
-    background-color: $dark;
-    z-index: 10;
+    background-color: C.$dark;
+    margin-bottom: 2vh;
     //border-bottom: 3px solid $accent;
     /* Links inside the navbar */
     a {
-        font-family: rainyhearts;
+        font-family: C.$rainyhearts;
         float: left;
         font-size: 30px;
-        color: $primary-white;
+        color: C.$primary-white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
 
     a:hover {
-        color: $pink;
+        color: C.$pink;
     }
 
     /* The dropdown container */
@@ -110,11 +73,11 @@ footer {
 
         /* Dropdown button */
         .dropbtn {
-            font-family: rainyhearts;
+            font-family: C.$rainyhearts;
             font-size: 30px;
             border: none;
             outline: none;
-            color: $primary-white;
+            color: C.$primary-white;
             /* this is the text. */
             padding: 14px 16px;
             background-color: inherit;
@@ -125,21 +88,21 @@ footer {
 
     /* Add a background color to navbar links on hover */
     .dropdown:hover .dropbtn {
-        color: $light-purple;
+        color: C.$light-purple;
     }
 
     /* Dropdown content (hidden by default) */
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: $dark;
+        background-color: C.$dark;
         min-width: 160px;
-        z-index: 1;
+        z-index: 15;
 
         /* Links inside the dropdown */
         a {
             float: none;
-            color: $primary-white;
+            color: C.$primary-white;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -147,7 +110,7 @@ footer {
         }
 
         a:hover {
-            color: $pink;
+            color: C.$pink;
         }
     }
 
@@ -168,15 +131,15 @@ footer {
     .projects-header {
         h2 {
             margin: 0.3em;
-            color: $primary-white;
-            font-family: rainyhearts, monospace;
+            color: C.$primary-white;
+            font-family: C.$rainyhearts, monospace;
         }
         padding-bottom: 3px;
-        box-shadow: 0px 0px 10px 5px $pink;
+        box-shadow: 0px 0px 10px 5px C.$pink;
         position: sticky;
         top: 0;
         padding-top: 5px;
-        background-color: $dark;
+        background-color: C.$dark;
     }
 
     .projects-list {
@@ -184,23 +147,23 @@ footer {
 
         .projects-card {
             overflow-x: hidden;
-            background-color: $secondary;
+            background-color: C.$secondary;
             padding-left: 0.5em;
             // border-bottom: 2px groove $accent;
         }
 
         p {
             font-family: Courier, monospace;
-            color: $primary-white;
+            color: C.$primary-white;
         }
 
         h3 {
-            color: $primary-white;
+            color: C.$primary-white;
         }
 
         #date {
             margin: 0;
-            color: $primary-white;
+            color: C.$primary-white;
         }
     }
 }
@@ -216,16 +179,16 @@ footer {
     .devlog-header {
         h2 {
             margin: 0.3em;
-            font-family: rainyhearts, monospace;
-            color: $primary-white;
+            font-family: C.$rainyhearts, monospace;
+            color: C.$primary-white;
         }
 
         position: sticky;
         top: 0;
         padding-top: 5px;
-        background-color: $dark;
+        background-color: C.$dark;
         padding-bottom: 3px;
-        box-shadow: 0px 0px 10px 5px $pink;
+        box-shadow: 0px 0px 10px 5px C.$pink;
     }
 
     .devlog-feed {
@@ -233,21 +196,21 @@ footer {
 
         .devlog-entry {
             overflow-x: hidden;
-            background-color: $secondary;
+            background-color: C.$secondary;
             padding-left: 0.5em;
             p {
-                color: $primary-white;
+                color: C.$primary-white;
                 font-family: Courier, monospace;
 
             }
 
             h3 {
-                color: $primary-white;
+                color: C.$primary-white;
             }
 
             #date {
                 margin: 0;
-                color: $primary-white;
+                color: C.$primary-white;
                 margin-bottom: 10px;
             }
         }
@@ -271,13 +234,19 @@ footer {
 /*---- FX ----*/
 /*---- FX ----*/
 /* ---- CLASSES ---- */
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    text-align: center;
+  }
+
 .glitch {
     color: rgb(223, 191, 191);
-    position: relative !important;
+    position: absolute !important;
     font-size: 9vw;
-    font-family: 'Spantaran';
-    text-align: center;
-    margin-top: 200px;
+    font-family: C.$spantaran;
     // margin: 70px 200px;
     animation: glitch 5s 5s infinite;
   }
@@ -310,17 +279,15 @@ footer {
     text-shadow: 0 0 200px rgb(223, 191, 191);
     color: transparent;
     position: absolute;
-    margin-top: -200px;
 }
 
 .subtitle {
-    font-family: 'RealityHyperRegular', serif;
-    font-weight: 100;
+    font-family: 'rainyhearts';
+    font-weight: 150;
     font-size: 1vw;
-    color: $primary-white;
+    color: C.$primary-white;
     text-transform: uppercase;
     letter-spacing: 1em;
-    text-align: center;
 }
 
 /* ---- KEYFRAMES ---- */
@@ -401,4 +368,32 @@ footer {
     footer {
         display: none;
     }
+
+    /*---- FX ----*/
+    .container {
+        position: sticky;
+        top: 15%;
+        left: 0%;
+    }
+    
+    .subtitle {
+        font-family: 'rainyhearts';
+        font-weight: 150;
+        font-size: 1vw;
+        color: C.$primary-white;
+        text-transform: uppercase;
+        letter-spacing: 1em;
+    }
+
+    .glitch {
+        color: rgb(223, 191, 191);
+        font-size: 9vw;
+        font-family: C.$spantaran;
+        // margin: 70px 200px;
+        animation: glitch 5s 5s infinite;
+      }
+
+      .glow {
+        display: none;
+      }
 }

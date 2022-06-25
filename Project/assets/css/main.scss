@@ -40,7 +40,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 27% 27% 27% 19% !important;
-    grid-template-rows: 50px auto auto 10% !important;
+    grid-template-rows: 60px auto auto 10% !important;
     grid-template:
     "header header header projects"
     "main main main projects"
@@ -86,7 +86,6 @@ footer {
 .navbar {
     overflow: hidden;
     background-color: $dark;
-    z-index: 10;
     //border-bottom: 3px solid $accent;
     /* Links inside the navbar */
     a {
@@ -413,10 +412,7 @@ footer {
         left: 0%;
     }
     .glow {
-        @extend .glitch;
-        text-shadow: 0 0 200px rgb(223, 191, 191);
-        color: transparent;
-        position: absolute;
+       display: none;
     }
     
     .subtitle {
