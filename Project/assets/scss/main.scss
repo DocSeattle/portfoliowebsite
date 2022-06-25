@@ -2,6 +2,12 @@
 @import "fonts";
 @import "mixins";
 
+/*---- CONSTANT ----*/
+body, html {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 /*---- GRID TEMPLATE ----*/
 body {
     margin: 0;
@@ -52,8 +58,7 @@ footer {
 
 .projects {
     display: block;
-    overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-y: scroll !important;
     scrollbar-width: none;
 
     .projects-header {

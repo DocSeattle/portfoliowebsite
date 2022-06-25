@@ -1,4 +1,3 @@
-import '../css/main.css';
 import * as THREE from 'three';
 
 /** VARIABLES */
