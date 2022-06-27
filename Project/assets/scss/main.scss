@@ -12,13 +12,13 @@ body, html {
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 27% 27% 27% 19% !important;
+    grid-template-columns: 1fr 3fr 3fr 1fr !important;
     grid-template-rows: 60px auto auto 10% !important;
     grid-template:
-    "header header header projects"
-    "main main main projects"
-    "main main main devlog"
-    "footer footer footer devlog";
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
 }
 
 /*---- TAGS ----*/
@@ -55,6 +55,7 @@ footer {
 
 /*---- CLASSES ----*/
 @include mixinNavbar;
+@include Sidebar;
 
 .projects {
     display: block;
@@ -212,7 +213,6 @@ footer {
     text-shadow: 0 0 200px rgb(223, 191, 191);
     color: transparent;
     position: absolute;
-    margin-top: -200;
 }
 
 .subtitle {
