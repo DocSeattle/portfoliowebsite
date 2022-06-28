@@ -1,18 +1,27 @@
-@use "./constant" as *;
+@import "colour";
+@import "fonts";
+@import "mixins";
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  background-color: $secondary;
+}
+
 /*---- GRID TEMPLATE ----*/
 body.portfolio {
-    
+    position: absolute;
     margin: 0;
     display: grid;
     grid-template-columns: 10% 80% 10% !important;
-    grid-template-rows: 50px 90% auto !important;
+    grid-template-rows: 57px 90% auto !important;
     grid-template:
     "header header header"
     "main main main"
     "footer footer footer";
 }
 /*---- GRID TEMPLATE ----*/
-
+@include mixNav1;
 /*---- TAGS ----*/
 header {
     grid-area: header;
@@ -21,10 +30,8 @@ header {
 main {
     grid-area: main;
     background-color: $dark;
-    padding: 2em;
-    display: grid;
-    grid-template-columns:  repeat(20%, 5);
-    grid-template-rows: repeat(25%, 4);
+    padding: 1em;
+    display: block;
 }
 
 footer {
@@ -39,26 +46,79 @@ footer {
 
 
 /* Float four columns side by side */
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
+main .gallery {
+  background-color: inherit;
+  margin: 10px 50px;
+  z-index: -1;
+  .gallery-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .image {
+      padding: 0.5rem;
+      img {
+        height: 200px;
+        filter: grayscale(100%);
+        transform: scale(1);
+        transition: 1s;
+      }
+      img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+        transition: 1s;
+      }
+      .imageinforow {
+        display: flex;
+        flex-wrap: nowrap;
+        h5 {
+          justify-self: right;
+        }
+        .imagesubtitle {
+          font-family: rainyhearts;
+          font-size: 1rem;
+          color: $primary-white;
+          margin: 0px;
+          margin-right: auto;
+        }
+        .imagetag {
+          font-family: rainyhearts;
+          font-size: 0.8rem;
+          color: $primary-white;
+          margin: 0px;
+        }
+      }
+    }
   }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+}
+
+
+@media (min-width: 320px) and (max-width: 786px) {
+  body.portfolio {
+    position: absolute;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 60px 90% auto !important;
+    grid-template:
+    "header"
+    "main"
+    "footer";
+    overflow: hidden;
+}
+
+main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.gallery {
+  .gallery-row {
+    .image {
+      padding: 0.1rem;
+    }
+    .imagesubtitle {
+      font-size: 2em;
+    }
   }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
+}
+}

@@ -13,7 +13,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr !important;
-    grid-template-rows: 60px auto auto 10% !important;
+    grid-template-rows: 56px auto auto 10% !important;
     grid-template:
     "header header header header"
     "main main main main"
@@ -54,7 +54,7 @@ footer {
 /*---- TAGS ----*/
 
 /*---- CLASSES ----*/
-@include mixinNavbar;
+@include mixNav1;
 @include Sidebar;
 
 .projects {
