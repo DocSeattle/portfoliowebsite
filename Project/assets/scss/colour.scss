@@ -10,3 +10,9 @@ $light-purple: #5D04D9;
 $dark-purple: #360259;
 $dark: #0D0D0D;
 $pink: #8704BF;
+
+
+/*---- Animation Colours ----*/
+$glow-colour-pulse-origin: $light-purple;
+$glow-colour-pulse-dark: $dark-purple;
+$glow-colour-pulse-light: lighten($light-purple, 35%);
