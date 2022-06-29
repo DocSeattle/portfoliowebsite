@@ -15,19 +15,21 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Portfolio</button>
-                <div class="dropdown-content">
-                    <a href="/assets/html/webdev.html">Web Development</a>
-                    <a href="/assets/html/portfolio_substances.html">Substances</a>
-                    <a href="/assets/html/portfolio3d.html">3d Modelling</a>
-                    <a href="/assets/html/portfolio2d.html">2d Digital Art</a>
-                </div>
-            </div>
-            <a href="/assets/html/about.html">About</a>
-        </div>
+        <nav>
+            <ul>
+                <li class="menu"><a href="index.html">Home</a></li>
+                <li class="menu"><a href="about.html">About</a></li>
+                <li class="menu">
+                    <a href="#">Services</a>
+                    <ul class="ani-menu">
+                        <li  href="#"><a href="#">.sbsar files</a></li>
+                        <li  href="#"><a href="#">.blend files</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="portfolio.html">Portfolio</a></li>
+                <li class="menu"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="sidebarWrapper">
         <section class="projects">
@@ -174,10 +176,10 @@
     <main>
         <div class="container">
             <div class="glow-bg"></div>
-            <div class="glitch" data-text="Seattle">Seattle </div>
+            <div class="glitch" data-text="Seattle">Seattle</div>
             <div class="glow">Seattle</div>
-            <p class="subtitle">IMPRACTICAL DEVELOPER</p>
-            </div>
+            <div><p class="subtitle">IMPRACTICAL DEVELOPER</p></div>
+        </div>
             <div class="scanlines"></div>
     </main>
     <footer>
