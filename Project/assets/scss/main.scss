@@ -5,6 +5,9 @@
 /*---- CONSTANT ----*/
 html {
     scroll-behavior: smooth;
+    p, h1, h2, h3, h4, h5, h6 {
+        z-index: 30;
+    }
 }
 
 body, html {
@@ -258,37 +261,53 @@ footer {
     left: 50%;
     text-align: center;
     margin: auto;
+    justify-content: center;
+    .glitch {
+        color: rgb(223, 191, 191);
+        font-size: 10rem;
+        font-family: spantaran;
+        margin: 70px 200px;
+        animation: glitch 5s 5s infinite;
+        &::before {
+          content: attr(data-text);
+          position: absolute;
+          left: -2px;
+          text-shadow: -5px 0 magenta;
+          overflow: hidden;
+          top: 0;
+          animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+        }
+        &::after {
+          content: attr(data-text);
+          position: absolute;
+          left: 2px;
+          text-shadow: -5px 0 lightgreen;
+          overflow: hidden;
+          top: 0;
+          animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+        }
+      }
+    .glow {
+        @extend .glitch;
+        top: 0;
+        left: 0; 
+        position: absolute;
+        text-shadow: 0 0 200px rgb(223, 191, 191);
+        color: transparent;
+    }
+    .subtitle {
+        font-family: 'rainyhearts';
+        font-weight: 150;
+        font-size: 1rem;
+        color: $primary-white;
+        text-transform: uppercase;
+        letter-spacing: 2em;
+    }
   }
 
-.glitch {
-    color: rgb(223, 191, 191);
-    position: absolute !important;
-    font-size: 9vw;
-    font-family: spantaran;
-    // margin: 70px 200px;
-    animation: glitch 5s 5s infinite;
-    &::before {
-      content: attr(data-text);
-      position: absolute;
-      left: -2px;
-      text-shadow: -5px 0 magenta;
-      overflow: hidden;
-      top: 0;
-      animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
-    }
-    &::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 2px;
-      text-shadow: -5px 0 lightgreen;
-      overflow: hidden;
-      top: 0;
-      animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
-    }
-  }
 
 .scanlines {
-    overflow: hidden;
+    overflow: visible;
     mix-blend-mode: difference;
     &::before {
         content: "";
@@ -310,21 +329,9 @@ footer {
 }
 
 
-.glow {
-    @extend .glitch;
-    text-shadow: 0 0 200px rgb(223, 191, 191);
-    color: transparent;
-    position: absolute;
-}
 
-.subtitle {
-    font-family: 'rainyhearts';
-    font-weight: 150;
-    font-size: 1vw;
-    color: $primary-white;
-    text-transform: uppercase;
-    letter-spacing: 1em;
-}
+
+
 
 /* ---- KEYFRAMES ---- */
 
