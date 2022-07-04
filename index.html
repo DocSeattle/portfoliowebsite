@@ -38,150 +38,12 @@
                 </li>
                 <li class="menu"><a href="portfolio.html">Portfolio</a></li>
                 <li class="menu"><a href="#">Contact</a></li>
+                <li class="menu"><a href="#Logs">Logs</a></li>
             </ul>
         </nav>
     </header>
     <div class="sidebarWrapper">
-        <section class="projects">
-            <div class="projects-header">
-                <h2>Recent Projects</h2>
-            </div>
-            <div class="projects-list">
-                <div class="projects-card">
-                    <h3>Website Icon</h3>
-                    <p>
-                        I took some time today, just as
-                        a break from all the faff with 
-                        HTML to make a proper icon for 
-                        this here website. This is 
-                        what I came up with.
-    
-                        Considering this is my first 
-                        proper project with Vector 
-                        images, I'm really quite chuffed
-                        with how it came out.
-                    </p>
-                    <img src="favicon.svg" width=300px; height=300px; style="margin: 0; margin-bottom:0.5em;">
-                </div>
-                <div class="projects-card">
-                    <h3>This Website</h3>
-                    <p>I've been working a great deal
-                        on this website, I think that
-                        getting a place to more permanently
-                        upload, store and archive things
-                        that I make can only do me good
-                        in the long run.
-                    </p>
-                </div>
-                <div class="projects-card">
-                    <h3>Movement Statemachine</h3>
-                    <p> I've spent a fair bit of time
-                        trying to learn how to code
-                        in C#, for the sakes of getting
-                        into game development. My engine
-                        of choice has been Unity3D and
-                        my first project in Unity is
-                        to make a statemachine that
-                        can easily be made to handle
-                        most movement in any project.
-                    </p>
-                </div>
-                
-            </div>
-        </section>
-        <section class="devlog">
-            <div class="devlog-header">
-                <h2>Devlog</h2>
-            </div>
-            <div class="devlog-feed">
-                <div class="devlog-entry">
-                    <h3>Website Development #5</h3>
-                    <p>
-                        Spent time refactoring the site.
-                        What that actually means is that 
-                        I spent roughly 5 hours trying to
-                        make SCSS files want to import 
-                        variables, mixins and whatnot
-                        so that I can have a cleaner slate
-                        when actually working.
-                    </p>
-                    <h5 id="date">'22-06-25</h5>
-                </div>
-                <div class="devlog-entry">
-                    <h3>Website Development #4</h3>
-                    <p>
-                        Development of the site
-                        has been an uphill battle the 
-                        past few days. First, half of the
-                        css file didn't save, which is both
-                        very strange and incredibly infuriating.
-                    </p>
-                    <p>
-                        After that, I decided to start 
-                        using GIT for source control and web
-                        hosting through their Pages service.
-                        Which, whilst yes, is a good idea,
-                        takes many hours to actually get running
-                        in my case. Learning how to navigate github,
-                        understanding branches, push, pull, commit
-                        and deploy. As well as getting the Pages 
-                        environment to build from the correct 
-                        branch of the project all was a confusing
-                        mess of a process.
-                    </p>
-                    <p>
-                        But, it is now done, and I should be able to
-                        continuously deploy the site and it'll update
-                        after each one. For the moment, though. I 
-                        have to be wary of how I format the /dist 
-                        file structure. My main issue stems from 
-                        the Pages environment not navigating files
-                        as I'm used to.
-                    </p>
-                    <h5 id="date">'22-06-24</h5>
-                </div>
-                <div class="devlog-entry">
-                    <h3> Website Development #3</h3>
-                    <p>Definitely all by myself (thanks hunt)
-                        fixed the three js not displaying. Now
-                        I can do stuff like this:
-                    </p>
-                    <canvas id="bg" class="canvas-preview"></canvas>
-                    <h5 id="date"> '22-06-22</h5>
-                </div>
-                <div class="devlog-entry">
-                    <h3>Website Refactoring</h3>
-                    <p>
-                        Started work on refactoring and
-                        reformatting the website to make
-                        User Experience better as well as
-                        improve maintenance for the future.
-                    </p>
-                    <h5 id="date">'22-06-22</h5>
-                </div>
-                <div class="devlog-entry">
-                    <h3>Website Development #2</h3>
-                    <p>
-                        Continued development on the website
-                        Been slowly familiarizing myself with
-                        HTML/CSS/JS, specifically learning how
-                        CSS Grid works.
-                    </p>
-                    <h6 id="date">'22-06-21</h6>
-                </div>
-                <div class="devlog-entry">
-                    <h3>Website Development #1</h3>
-                    <p> Started development on my portfolio
-                        website. This portfolio website, to
-                        be clear. Experimented with site
-                        layouts for a while, still not quite
-                        happy with how it's looking but getting
-                        closer to a finished product.
-                    </p>
-                    <h6 id="date">'22-06-20</h6>
-                </div>
-            </div>
-        </section>
+        
     </div>
     <main>
         <div class="container">
@@ -193,10 +55,10 @@
         </div>
         <div class="scanlines"></div>
 
-        <div class="mainContent mainContent--backgroundfilter">
+        <div  id="About" class="mainContent mainContent--backgroundfilter">
             <div class="mainContent--wrapper">
                 <div class="mainContent--body">
-                    <h2 id="About">About Me</h4>
+                    <h2>About Me</h4>
                     <p> 
                         Hello! <br />
                         I'm Seattle, a Swedish
@@ -239,6 +101,182 @@
                 </div>
             </div>
             <div class="scanlines"></div>
+        </div>
+        <div id="Logs" class="projectLog projectLog--wrapper">
+            <div class="projectLog--body">
+                <section class="projects">
+                    <div class="projects-header">
+                        <h2>Recent Projects</h2>
+                    </div>
+                    <div class="projects-list">
+                        <!--Template 
+                        <div class="projects-card">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        -->
+                        <div class="projects-card">
+                            <h3>Landing Page Art</h3>
+                            <p>
+                                Seen in the <a href="#About">about</a> section
+                                of this site, you can see a render I've 
+                                created in blender specifically for this
+                                website. I personally really dig how it 
+                                came out, though there are things that I
+                                would like to change if I knew how.
+                            </p>
+                        </div>
+                        <div class="projects-card">
+                            <h3>Website Landing Page</h3>
+                            <p>
+                                I've continued work on the
+                                website! I finally feel like 
+                                I'm starting to get somewhere.
+                            </p>
+                            <p>
+                                Essentially what I've done, is
+                                remake the landing page so it's 
+                                one .html file instead of, like
+                                7 html files. Refactored(aka redone)
+                                the navbar at the top as well as 
+                                added some art that I've made.
+                            </p>
+                        </div>
+                        <div class="projects-card">
+                            <h3>Website Icon</h3>
+                            <p>
+                                I took some time today, just as
+                                a break from all the faff with 
+                                HTML to make a proper icon for 
+                                this here website. This is 
+                                what I came up with.
+            
+                                Considering this is my first 
+                                proper project with Vector 
+                                images, I'm really quite chuffed
+                                with how it came out.
+                            </p>
+                            <img src="favicon.svg" width=300px; height=300px; style="margin: 0; margin-bottom:0.5em;">
+                        </div>
+                        <div class="projects-card">
+                            <h3>This Website</h3>
+                            <p>I've been working a great deal
+                                on this website, I think that
+                                getting a place to more permanently
+                                upload, store and archive things
+                                that I make can only do me good
+                                in the long run.
+                            </p>
+                        </div>
+                        <div class="projects-card">
+                            <h3>Movement Statemachine</h3>
+                            <p> I've spent a fair bit of time
+                                trying to learn how to code
+                                in C#, for the sakes of getting
+                                into game development. My engine
+                                of choice has been Unity3D and
+                                my first project in Unity is
+                                to make a statemachine that
+                                can easily be made to handle
+                                most movement in any project.
+                            </p>
+                        </div>
+                    </div>                    
+                </section>
+                <section class="devlog">
+                    <div class="devlog-header">
+                        <h2>Devlog</h2>
+                    </div>
+                    <div class="devlog-feed">
+                        <div class="devlog-entry">
+                            <h3>Website Development #5</h3>
+                            <p>
+                                Spent time refactoring the site.
+                                What that actually means is that 
+                                I spent roughly 5 hours trying to
+                                make SCSS files want to import 
+                                variables, mixins and whatnot
+                                so that I can have a cleaner slate
+                                when actually working.
+                            </p>
+                            <h5 id="date">'22-06-25</h5>
+                        </div>
+                        <div class="devlog-entry">
+                            <h3>Website Development #4</h3>
+                            <p>
+                                Development of the site
+                                has been an uphill battle the 
+                                past few days. First, half of the
+                                css file didn't save, which is both
+                                very strange and incredibly infuriating.
+                            </p>
+                            <p>
+                                After that, I decided to start 
+                                using GIT for source control and web
+                                hosting through their Pages service.
+                                Which, whilst yes, is a good idea,
+                                takes many hours to actually get running
+                                in my case. Learning how to navigate github,
+                                understanding branches, push, pull, commit
+                                and deploy. As well as getting the Pages 
+                                environment to build from the correct 
+                                branch of the project all was a confusing
+                                mess of a process.
+                            </p>
+                            <p>
+                                But, it is now done, and I should be able to
+                                continuously deploy the site and it'll update
+                                after each one. For the moment, though. I 
+                                have to be wary of how I format the /dist 
+                                file structure. My main issue stems from 
+                                the Pages environment not navigating files
+                                as I'm used to.
+                            </p>
+                            <h5 id="date">'22-06-24</h5>
+                        </div>
+                        <div class="devlog-entry">
+                            <h3> Website Development #3</h3>
+                            <p>Definitely all by myself (thanks hunt)
+                                fixed the three js not displaying. Now
+                                I can do stuff like this: (This no longer works. Oops)
+                            </p>
+                            <canvas id="bg" class="canvas-preview"></canvas>
+                            <h5 id="date"> '22-06-22</h5>
+                        </div>
+                        <div class="devlog-entry">
+                            <h3>Website Refactoring</h3>
+                            <p>
+                                Started work on refactoring and
+                                reformatting the website to make
+                                User Experience better as well as
+                                improve maintenance for the future.
+                            </p>
+                            <h5 id="date">'22-06-22</h5>
+                        </div>
+                        <div class="devlog-entry">
+                            <h3>Website Development #2</h3>
+                            <p>
+                                Continued development on the website
+                                Been slowly familiarizing myself with
+                                HTML/CSS/JS, specifically learning how
+                                CSS Grid works.
+                            </p>
+                            <h6 id="date">'22-06-21</h6>
+                        </div>
+                        <div class="devlog-entry">
+                            <h3>Website Development #1</h3>
+                            <p> Started development on my portfolio
+                                website. This portfolio website, to
+                                be clear. Experimented with site
+                                layouts for a while, still not quite
+                                happy with how it's looking but getting
+                                closer to a finished product.
+                            </p>
+                            <h6 id="date">'22-06-20</h6>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
     <footer>
