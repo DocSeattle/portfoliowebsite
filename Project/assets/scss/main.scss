@@ -3,9 +3,18 @@
 @import "mixins";
 
 /*---- CONSTANT ----*/
+html {
+    scroll-behavior: smooth;
+}
+
 body, html {
     height: 100vh;
     overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /*---- GRID TEMPLATE ----*/
@@ -18,7 +27,7 @@ body {
     "header header header header"
     "main main main main"
     "main main main main"
-    "footer footer footer footer";
+    "main main main main";
 }
 
 /*---- TAGS ----*/
@@ -41,6 +50,11 @@ main {
     grid-area: main;
     background-color: $dark;
     padding: 2em;
+    overflow: scroll;
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 footer {
@@ -49,6 +63,7 @@ footer {
     padding-left: 2em;
     color: $primary-white;
     box-shadow: 0px 0px 10px 5px $pink;
+    display: none;
     z-index: 0;
 }
 /*---- TAGS ----*/
@@ -58,12 +73,15 @@ footer {
 @include Sidebar;
 
 .projects {
+    max-height: 100vh;
+    max-width: 50vw;
     display: block;
     overflow-y: scroll !important;
     scrollbar-width: none;
 
     .projects-header {
         h2 {
+            text-align: center;
             margin: 0.3em;
             color: $primary-white;
             font-family: rainyhearts, monospace;
@@ -83,6 +101,8 @@ footer {
             overflow-x: hidden;
             background-color: $secondary;
             padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-right: 2px solid $dark-purple;
             // border-bottom: 2px groove $accent;
         }
 
@@ -107,11 +127,14 @@ footer {
 }
 
 .devlog {
+    max-height: 100vh;
+    max-width: 50vw;
     display: block;
     overflow-y: scroll;
     scrollbar-width: none;
     .devlog-header {
         h2 {
+            text-align: center;
             margin: 0.3em;
             font-family: rainyhearts, monospace;
             color: $primary-white;
@@ -132,6 +155,7 @@ footer {
             overflow-x: hidden;
             background-color: $secondary;
             padding-left: 0.5em;
+            padding-right: 0.5em;
             p {
                 color: $primary-white;
                 font-family: Courier, monospace;
@@ -139,6 +163,7 @@ footer {
             }
 
             h3 {
+                font-family: rainyhearts;
                 color: $primary-white;
             }
 
@@ -161,6 +186,64 @@ footer {
     width: 200px;
     height: 200px;
 }
+
+
+.mainContent {
+    background-image: url('./../img/80s\ wallpaper/webdevbackground.jpg');
+    background-position: 50%, 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    &--backgroundfilter {
+        filter: grayscale(50%);
+    }
+    &--wrapper {
+        color: $primary-white;
+        .mainContent--body {
+            background-color: rgba(0, 0, 0, 0.70);
+            border-radius: 5px;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            position: absolute;
+            justify-content: center;
+            & > h2 {
+                font-family: spantaran;
+                letter-spacing: 0.4rem;
+            }
+            & > p {
+                font-family: rainyhearts;
+            }
+            & > h2, & > p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.projectLog {
+    background-position: 50%, 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 200%;
+    left: 0%;
+    &--wrapper {
+        display: flex;
+    }
+    &--body {
+        & > section:nth-of-type(1) {
+            position: absolute;
+            left: 0%;
+        }
+        & > section:nth-of-type(2) {
+            position: absolute;
+            left: 50%;
+        }
+    }
+}
 /*---- CLASSES ----*/
 
 /*---- FX ----*/
@@ -174,6 +257,7 @@ footer {
     top: 40%;
     left: 50%;
     text-align: center;
+    margin: auto;
   }
 
 .glitch {
