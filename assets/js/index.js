@@ -1,5 +1,3 @@
-import './three.cjs';
-import './three.js';
 import './three.module.js';
 
 /** VARIABLES */
