@@ -34,13 +34,13 @@ body.portfolio {
 /** Style <nav> */
 nav {
   z-index: 2;
-  font-size: 25px;
+  font-size: 1rem;
   /** Style links */
 }
 nav a {
   color: #F0DBD1;
   display: block;
-  padding: 15px 60px;
+  padding: 1.3rem 2rem;
   text-decoration: none;
   font-family: rainyhearts;
 }
