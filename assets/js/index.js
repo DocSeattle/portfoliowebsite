@@ -1,4 +1,6 @@
-import THREE from 'three';
+import './three.cjs';
+import './three.js';
+import './three.module.js';
 
 /** VARIABLES */
 let pWidth = 200;
