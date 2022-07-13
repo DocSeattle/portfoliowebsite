@@ -42,8 +42,6 @@ scene.add(cube);
 cylinder.position.set(0,-1,0);
 cube.position.set(0,4,0);
 
-/** CONTROLS */
-const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate()
 {
